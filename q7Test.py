@@ -1,15 +1,15 @@
 import Readfile
 import ProbCalculate
 
-path_en = '/Users/jiahezhao/Desktop/GWU/NLP/Homework1/EN.txt'
+path_en = 'EN.txt'
 lang_en = 'English'
-path_fr = '/Users/jiahezhao/Desktop/GWU/NLP/Homework1/FR.txt'
+path_fr = 'FR.txt'
 lang_fr = 'French'
-path_gr = '/Users/jiahezhao/Desktop/GWU/NLP/Homework1/GR.txt'
+path_gr = 'GR.txt'
 lang_gr = 'German'
-path_test = '/Users/jiahezhao/Desktop/GWU/NLP/Homework1/LangID.test.txt'
+path_test = 'LangID.test.txt'
 lang_test = 'English'
-path_res = '/Users/jiahezhao/Desktop/GWU/NLP/Homework1/LangID.gold.txt'
+path_res = 'LangID.gold.txt'
 
 english_file = Readfile.Readfile(path_en, 'English')
 english_file.change_str2word()
@@ -68,13 +68,16 @@ def test(model1dic, model1uni, model1total, model2dic, model2uni, model2total, m
             res_str = "GR"
 
         test_str = str(test_result[total])
-        print(res_str, test_str)
-        newf.write(str(index)+". "+res_str+"\n")
+
         if test_str.count(str(res_str)) > 0:
             accuate += 1
             if prob_final == 0:
+                res_str = "UNKNOWN"
                 accuate -= 1
         index += 1
+        print(res_str, test_str)
+        newf.write(str(index) + ". " + res_str + "\n")
+
     print(accuate, ",", total)
     print("Accuracy is: ", float(accuate) / float(total)*100, "%")
     newf.write("Accuracy is: " + str(float(accuate) / float(total)*100)+"%")
@@ -83,7 +86,7 @@ def test(model1dic, model1uni, model1total, model2dic, model2uni, model2total, m
 test(english_file.letter_dictionary, english_file.letter_unigram, english_file.totalletter,
      french_file.letter_dictionary, french_file.letter_unigram, french_file.totalletter,
      german_file.letter_dictionary, german_file.letter_unigram, german_file.totalletter,
-     test_file.sentence_file, result_file.sentence_file, '/Users/jiahezhao/Desktop/GWU/NLP/Homework1/q7.txt')
+     test_file.sentence_file, result_file.sentence_file, 'q7.txt')
 
 
 

@@ -1,15 +1,15 @@
 import Readfile
 import ProbCalculate
 
-path_en = '/Users/jiahezhao/Desktop/GWU/NLP/Homework1/EN.txt'
+path_en = 'EN.txt'
 lang_en = 'English'
-path_fr = '/Users/jiahezhao/Desktop/GWU/NLP/Homework1/FR.txt'
+path_fr = 'FR.txt'
 lang_fr = 'French'
-path_gr = '/Users/jiahezhao/Desktop/GWU/NLP/Homework1/GR.txt'
+path_gr = 'GR.txt'
 lang_gr = 'German'
-path_test = '/Users/jiahezhao/Desktop/GWU/NLP/Homework1/LangID.test.txt'
+path_test = 'LangID.test.txt'
 lang_test = 'English'
-path_res = '/Users/jiahezhao/Desktop/GWU/NLP/Homework1/LangID.gold.txt'
+path_res = 'LangID.gold.txt'
 
 english_file = Readfile.Readfile(path_en, 'English')
 english_file.change_str2word()
@@ -44,7 +44,7 @@ test_file = Readfile.Readfile(path_test, 'English')
 
 result_file = Readfile.Readfile(path_res, 'English')
 
-write_file_path = '/Users/jiahezhao/Desktop/GWU/NLP/Homework1/q10.txt'
+write_file_path = 'q10.txt'
 
 newf = open(write_file_path, 'w')
 p = ProbCalculate.ProbCalculate()
