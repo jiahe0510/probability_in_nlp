@@ -15,11 +15,8 @@ english_file = Readfile.Readfile(path_en, 'English')
 english_file.change_str2word()
 # print(english_file.word_file)
 english_file.build_word_dic()
-print(english_file.word_index_dic)
-print(english_file.index_word_dic)
 english_file.build_probability()
 english_file.test_word_dictionary()
-english_file.build_trigram_dic()
 english_file.build_trigram_probability()
 
 french_file = Readfile.Readfile(path_fr, 'French')
@@ -28,7 +25,6 @@ french_file.change_str2word()
 french_file.build_word_dic()
 french_file.build_probability()
 french_file.test_word_dictionary()
-french_file.build_trigram_dic()
 french_file.build_trigram_probability()
 
 german_file = Readfile.Readfile(path_gr, 'German')
@@ -37,7 +33,6 @@ german_file.change_str2word()
 german_file.build_word_dic()
 german_file.build_probability()
 german_file.test_word_dictionary()
-german_file.build_trigram_dic()
 german_file.build_trigram_probability()
 
 test_file = Readfile.Readfile(path_test, 'English')
@@ -57,15 +52,12 @@ for line in test_file.sentence_file:
 
     total += 1
     prob_en = p.katz_trigram(english_file.word_dictionary, english_file.trigram_dic,english_file.word_unigram,
-                             english_file.word_index_dic, english_file.index_word_dic,
-                             english_file.totalword, line, alpha1, alpha2)
-    prob_fr = p.turing_prob(french_file.word_dictionary, french_file.trigram_dic, french_file.word_unigram,
-                            french_file.word_index_dic, french_file.index_word_dic,
-                            french_file.totalword, line, alpha1, alpha2)
-    prob_gr = p.turing_prob(german_file.word_dictionary, german_file.trigram_dic, german_file.word_unigram,
-                            german_file.word_index_dic, german_file.index_word_dic,
-                            german_file.totalword, line, alpha1, alpha2)
-    # prob_final = float(max(prob_en, prob_gr, prob_fr))
+                             english_file.word_index_dic, english_file.totalword, line, alpha1, alpha2)
+    prob_fr = p.katz_trigram(french_file.word_dictionary, french_file.trigram_dic, french_file.word_unigram,
+                            french_file.word_index_dic, french_file.totalword, line, alpha1, alpha2)
+    prob_gr = p.katz_trigram(german_file.word_dictionary, german_file.trigram_dic, german_file.word_unigram,
+                            german_file.word_index_dic, german_file.totalword, line, alpha1, alpha2)
+    #prob_final = float(max(prob_en, prob_gr, prob_fr))
     print(prob_en, prob_fr, prob_gr)
     if prob_en > prob_fr and prob_en > prob_gr:
         res_str = "EN"

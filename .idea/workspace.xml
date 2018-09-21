@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21305657-2d32-41bd-bf7f-5a132be752ab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ProbCalculate.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProbCalculate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Readfile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/q10Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/q10Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/q7Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/q7Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/q8Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/q8Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/q9Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/q9Test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +16,7 @@
     <session id="550145053">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
@@ -38,13 +37,13 @@
         <counts>
           <entry key="Python Console" value="76" />
           <entry key="dummy" value="2" />
-          <entry key="py" value="14244" />
+          <entry key="py" value="15619" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="14320" />
+          <entry key="Python" value="15695" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -55,11 +54,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Readfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="60" column="37" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+            <state relative-caret-position="-4">
+              <caret line="100" column="60" lean-forward="true" selection-start-line="100" selection-start-column="60" selection-end-line="100" selection-end-column="60" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
-                <marker date="1537414365168" expanded="true" signature="4314:4549" ph="..." />
+                <element signature="e#3267#3804#0" />
+                <marker date="1537568166637" expanded="true" signature="3699:3839" ph="..." />
               </folding>
             </state>
           </provider>
@@ -68,13 +68,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProbCalculate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="98" column="33" selection-start-line="98" selection-start-column="33" selection-end-line="98" selection-end-column="33" />
+            <state relative-caret-position="312">
+              <caret line="123" column="35" lean-forward="true" selection-start-line="123" selection-start-column="35" selection-end-line="123" selection-end-column="35" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
-                <marker date="1537415661819" expanded="true" signature="1548:1549" ph="..." />
-                <marker date="1537415661819" expanded="true" signature="1548:1612" ph="..." />
-                <marker date="1537415661819" expanded="true" signature="5053:5058" ph="..." />
+                <marker date="1537568364273" expanded="true" signature="1505:1506" ph="..." />
+                <marker date="1537568364273" expanded="true" signature="1505:1569" ph="..." />
+                <marker date="1537568364273" expanded="true" signature="4979:4984" ph="..." />
               </folding>
             </state>
           </provider>
@@ -83,7 +83,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/q7Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
+            <state relative-caret-position="749">
               <caret line="73" column="31" lean-forward="true" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -96,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/q8Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="40" column="19" lean-forward="true" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+            <state relative-caret-position="118">
+              <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -108,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/q9Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="11" selection-end-column="28" />
+            <state relative-caret-position="-415">
+              <caret line="16" column="31" lean-forward="true" selection-start-line="3" selection-end-line="11" selection-end-column="28" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -120,8 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/q10Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+            <state relative-caret-position="313">
+              <caret line="72" column="20" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -164,12 +164,12 @@
       <list>
         <option value="$PROJECT_DIR$/ex.py" />
         <option value="$PROJECT_DIR$/Test.py" />
-        <option value="$PROJECT_DIR$/Readfile.py" />
-        <option value="$PROJECT_DIR$/ProbCalculate.py" />
         <option value="$PROJECT_DIR$/q9Test.py" />
-        <option value="$PROJECT_DIR$/q10Test.py" />
         <option value="$PROJECT_DIR$/q8Test.py" />
         <option value="$PROJECT_DIR$/q7Test.py" />
+        <option value="$PROJECT_DIR$/Readfile.py" />
+        <option value="$PROJECT_DIR$/ProbCalculate.py" />
+        <option value="$PROJECT_DIR$/q10Test.py" />
       </list>
     </option>
   </component>
@@ -218,7 +218,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Test">
+  <component name="RunManager" selected="Python.q8Test">
     <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="nlp1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -333,10 +333,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Test" />
+        <item itemvalue="Python.q8Test" />
         <item itemvalue="Python.q9Test" />
         <item itemvalue="Python.q10Test" />
-        <item itemvalue="Python.q8Test" />
+        <item itemvalue="Python.Test" />
         <item itemvalue="Python.ex" />
       </list>
     </recent_temporary>
@@ -363,7 +363,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27659574" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27659574" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -392,32 +392,33 @@
     <entry file="file://$USER_HOME$/Desktop/GWU/ProbCalculate.py" />
     <entry file="file://$PROJECT_DIR$/Readfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="60" column="37" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+        <state relative-caret-position="-4">
+          <caret line="100" column="60" lean-forward="true" selection-start-line="100" selection-start-column="60" selection-end-line="100" selection-end-column="60" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
-            <marker date="1537414365168" expanded="true" signature="4314:4549" ph="..." />
+            <element signature="e#3267#3804#0" />
+            <marker date="1537568166637" expanded="true" signature="3699:3839" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProbCalculate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="98" column="33" selection-start-line="98" selection-start-column="33" selection-end-line="98" selection-end-column="33" />
+        <state relative-caret-position="312">
+          <caret line="123" column="35" lean-forward="true" selection-start-line="123" selection-start-column="35" selection-end-line="123" selection-end-column="35" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
-            <marker date="1537415661819" expanded="true" signature="1548:1549" ph="..." />
-            <marker date="1537415661819" expanded="true" signature="1548:1612" ph="..." />
-            <marker date="1537415661819" expanded="true" signature="5053:5058" ph="..." />
+            <marker date="1537568364273" expanded="true" signature="1505:1506" ph="..." />
+            <marker date="1537568364273" expanded="true" signature="1505:1569" ph="..." />
+            <marker date="1537568364273" expanded="true" signature="4979:4984" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/q8Test.py">
+    <entry file="file://$PROJECT_DIR$/q10Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="40" column="19" lean-forward="true" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+        <state relative-caret-position="313">
+          <caret line="72" column="20" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -426,18 +427,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/q9Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="-415">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="3" selection-end-line="11" selection-end-column="28" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/q10Test.py">
+    <entry file="file://$PROJECT_DIR$/q8Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+        <state relative-caret-position="118">
+          <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -446,7 +447,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/q7Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
+        <state relative-caret-position="749">
           <caret line="73" column="31" lean-forward="true" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />

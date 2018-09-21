@@ -1,7 +1,6 @@
 from nltk import word_tokenize, sent_tokenize
 from string import punctuation
 from string import digits
-from nltk.stem.porter import PorterStemmer
 
 
 class ProbCalculate:
@@ -87,8 +86,7 @@ class ProbCalculate:
         return float(probability)
 
 #   The function below is used for katz-backoff function
-    def katz_trigram(self, dictionary, dictionary3D, unigram, word_index_dic, index_word_dic, total, word_array, alpha1, alpha2):
-        ps = PorterStemmer()
+    def katz_trigram(self, dictionary, dictionary3D, unigram, word_index_dic, total, word_array, alpha1, alpha2):
         probability = 1
         sen_array = self.__change_word_array(word_array)
         for sen in sen_array:
@@ -97,24 +95,31 @@ class ProbCalculate:
             length = len(sen)
             start = 2
             while start < length:
-                w1, w2, w3 = 0
-                if w1 in word_index_dic: w1 = word_index_dic[ps.stem(sen[start-2])]
-                if w2 in word_index_dic: w2 = word_index_dic[ps.stem(sen[start-1])]
-                if w3 in word_index_dic: w3 = word_index_dic[ps.stem(sen[start])]
+                w1, w2, w3 = sen[start-2], sen[start-1], sen[start]
 
-                if w1 == 0 or w2 == 0 or w3 == 0 or dictionary3D[w1][w2][w3] == 0:
-                    if w2 == 0  or w3 == 0 or dictionary[index_word_dic[w2]][index_word_dic[w3]] == 0:
-                        if w3 == 0:
-                            temp = 1 / total * alpha2
-                        else:
-                            temp = unigram[index_word_dic[w3]] / total * alpha2
-                    else:
-                        if w2 == 0:
-                            temp = 1 / total *alpha1
-                        else:
-                            temp = dictionary[index_word_dic[w2]][index_word_dic[w3]] / unigram[index_word_dic[w2]] * alpha1
+                if w1 in word_index_dic:
+                    d1 = word_index_dic[w1]
                 else:
-                    temp = dictionary3D[w1][w2][w3] / dictionary[index_word_dic[w1]][index_word_dic[w2]]
+                    d1 = 0
+                if w2 in word_index_dic:
+                    d2 = word_index_dic[w2]
+                else:
+                    d2 = 0
+                if w3 in word_index_dic:
+                    d3 = word_index_dic[w3]
+                else:
+                    d3 = 0
+
+                if d1 in dictionary3D and d2 in dictionary3D[d1] and d3 in dictionary3D[d1][d2] and dictionary3D[d1][d2][d3] > 0:
+                    temp = dictionary3D[d1][d2][d3] / dictionary[w1][w2]
+                else:
+                    if w2 in dictionary and w3 in dictionary[w2] and dictionary[w2][w3] > 0:
+                        temp = dictionary[w2][w3] / unigram[w2] * alpha1
+                    else:
+                        if w3 in unigram:
+                            temp = unigram[w3] / total * alpha2
+                        else:
+                            temp = 1 / total * alpha2
 
                 probability *= temp
                 start += 1

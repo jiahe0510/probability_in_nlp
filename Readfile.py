@@ -24,7 +24,6 @@ class Readfile:
         self.turing_prob = {}
         self.trigram_dic = {}
         self.word_index_dic = {}
-        self.index_word_dic = {}
         self.stop_word = set(stopwords.words(lang))
 
         for lines in input_file:
@@ -53,15 +52,12 @@ class Readfile:
                 self.word_file.append(temparr)
 
     def build_word_dic(self):
-        ps = porter.PorterStemmer()
         index = 1
         for line in self.word_file:
             for word in line:
                 self.word_set.add(word)
-                word2 = ps.stem(word)
-                if word2 not in self.word_index_dic and word2 not in self.stop_word:
-                    self.word_index_dic[word2] = index
-                    self.index_word_dic[index] = word2
+                if word not in self.word_index_dic:
+                    self.word_index_dic[word] = index
                     index += 1
         self.totalword = len(self.word_set)
 
@@ -104,26 +100,32 @@ class Readfile:
             temp_down = 1 - k * turing[k] / turing[0]
             self.turing_prob[c] = float(temp_up / temp_down)
 
-    def build_trigram_dic(self):
-        temp_set = self.word_index_dic.keys()
-        for w1 in temp_set:
-            firstdic = {}
-            for w2 in temp_set:
-                seconddic = {}
-                for w3 in temp_set:
-                    seconddic[self.word_index_dic[w3]] = 0
-                firstdic[self.word_index_dic[w2]] = seconddic
-            self.trigram_dic[self.word_index_dic[w1]] = firstdic
-
     def build_trigram_probability(self):
         print("Build trigram probability works")
         for line in self.word_file:
             length = len(line)
             start = 2
             while start < length:
-                self.trigram_dic[line[start - 2]][line[start - 1]][line[start]] += 1
+                w1, w2, w3 = line[start-2], line[start-1], line[start]
+                d1, d2, d3 = self.word_index_dic[w1], self.word_index_dic[w2], self.word_index_dic[w3]
+                if d1 in self.trigram_dic and d2 in self.trigram_dic[d1] and d3 in self.trigram_dic[d1][d2]:
+                    self.trigram_dic[d1][d2][d3] += 1
+                else:
+                    if d1 not in self.trigram_dic:
+                        one = {}
+                        two = {}
+                        self.trigram_dic[d1] = one
+                        self.trigram_dic[d1][d2] = two
+                        self.trigram_dic[d1][d2][d3] = 1
+                    else:
+                        if d2 not in self.trigram_dic[d1]:
+                            two = {}
+                            self.trigram_dic[d1][d2] = two
+                            self.trigram_dic[d1][d2][d3] = 1
+                        else:
+                            if d3 not in self.trigram_dic[d1][d2]:
+                                self.trigram_dic[d1][d2][d3] = 1
                 start += 1
-
 # -------------------------  functions below are used for letter bigram  ------------------------
 
     def __build_letter_unigram(self, word):
